@@ -82,8 +82,6 @@ export class AppService {
 
     const projects = await program.account.project.all();
 
-    console.log(projects[0]);
-
     return projects.map((p: any) => ({
       name: p.account.name,
       number: p.account.availableOffset.toString(),
